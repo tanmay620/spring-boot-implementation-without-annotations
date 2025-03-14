@@ -1,0 +1,14 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="userConfigBean" class="org.example.bean.UserConfig">
+        <property name="name" value="jhon dee"/>
+        <property name="className" value="testClass"/>
+    </bean>
+
+    <bean id="userService" class="org.example.service.UserService">
+        <constructor-arg ref="userConfigBean"/>
+    </bean>
+
+</beans>
